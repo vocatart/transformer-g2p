@@ -1,7 +1,5 @@
 from util import MalformedDictionaryError, UNK_IDX
-
 import torch
-from torch import Tensor
 
 class TSVDataset:
 	def __init__(self, dict_path: str, graphemes: list[str], phonemes: list[str]) -> None:
@@ -31,7 +29,7 @@ class TSVDataset:
 		"""
 		return len(self.entries)
 	
-	def __getitem__(self, idx: int) -> tuple[Tensor, Tensor]:
+	def __getitem__(self, idx: int) -> tuple[torch.Tensor, torch.Tensor]:
 		"""Returns tensor pair at index.
 
 		Args:
