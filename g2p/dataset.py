@@ -1,7 +1,7 @@
 from util import MalformedDictionaryError, UNK_IDX
 import torch
 
-class TSVDataset:
+class TSVDataset(torch.utils.data.Dataset):
 	def __init__(self, dict_path: str, graphemes: list[str], phonemes: list[str]) -> None:
 		"""Creates dataset from TSV dictionary file. Dictionary should have two entries.
 
