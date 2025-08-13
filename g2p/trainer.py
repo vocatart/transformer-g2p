@@ -285,6 +285,8 @@ class Trainer():
 		}
 
 		torch.save(checkpoint, f"{self.artifacts_dir}/model-step-{step}.pt")
+
+	# TODO load
 	
 	def train(self):
 		log_dir = f"{self.artifacts_dir}/logs/{self.run_datetime}"
