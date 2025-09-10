@@ -1,4 +1,4 @@
-from util import MalformedDictionaryError, UNK_IDX
+from g2p.util import MalformedDictionaryError, UNK_IDX
 import torch
 
 class TSVDataset(torch.utils.data.Dataset):
