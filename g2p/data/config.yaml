@@ -1,0 +1,18 @@
+training:
+  run_name: 'cmudict-english'
+  batch_size: 32
+  max_steps: 100000
+  learning_rate: 0.0001
+  warmup_steps: 10000
+  plateau_factor: 0.5
+  plateau_patience: 10
+  early_stopping_patience: 5
+  generate_steps: 10000
+  validate_steps: 10000
+  checkpoint_steps: 1000000
+  generated_samples: 10
+  validation_divide_by: 10
+  dl_workers: 0
+
+data:
+  dict_path: 'g2p/data/dict.tsv'
